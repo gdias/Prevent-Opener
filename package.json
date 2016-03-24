@@ -1,0 +1,12 @@
+{
+  "name": "preventWindowOpener",
+  "description": "test window.opener",
+  "version": "0.0.1",
+  "main": "app.js",
+  "author": "Guillaume DIAS COELHO",
+  "license": "MIT",
+  "dependencies": {
+    "finalhandler": "^0.4.1",
+    "serve-static": "^1.10.2"
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Page A</title>
+    </head>
+    <body>
+        <h1>Page A</h1>
+        <div class="links">
+            <a href="b.html" target="_blank">lien test _blank #1</a> <br>
+            <a href="b.html">lien test _blank #2</a> <br>
+            <a href="b.html" target="_blank">lien test _blank #3</a> <br>
+            <a href="b.html" target="_blank">lien test _blank #4</a>
+        </div>
+        <script>
+            var ObjToArray = function(obj) {
+                return [].map.call(obj, function(element) {
+                    return element
+                })
+            }
+
+            var listA = document.querySelectorAll("a")
+            var listObj = ObjToArray(listA)
+
+            listObj.forEach(function(value, index, array) {
+                var hasTarget = value.hasAttribute("target")
+                if (!!hasTarget)
+                        value.setAttribute("rel", "noopener")
+            })
+            
+        </script>
+    </body>
+</html>
